@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/janani/Project/onlineStore/client" ,
+    "public": "../" ,
     "ignore": [
       "firebase.json",
       "**/.*",
