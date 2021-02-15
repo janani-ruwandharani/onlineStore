@@ -2,6 +2,7 @@
 This project can be used as a boiler plate for building a MongoDB-Express-React-Node stack application.
 Base URL: https://frozen-lake-54898.herokuapp.com/
 Hit all the Routes with this Url as its base to access the API
+**************************************************************
 ## Features:
   - CRUD operations for items, subject to user authorization
   - User registration and verification by email
