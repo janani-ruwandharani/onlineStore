@@ -110,9 +110,10 @@ router.post("/register", async (req, res) => {
         subject: "Please verify the email address", // Subject line
         html: `<h4>Thank you for registering.<h4>
         <p>Please verify this email address by clicking the following link</p>
-        <a href="https://frozen-lake-54898.herokuapp.com/api/auth/verify/${newUser.secretToken}">
-        https://frozen-lake-54898.herokuapp.com/api/auth/verify/${newUser.secretToken}</a>`,
+        <a href="https://fork-online-store.herokuapp.com/api/auth/verify/${newUser.secretToken}">
+        https://fork-online-store.herokuapp.com/api/auth/verify/${newUser.secretToken}</a>`,
       };
+      
       let mailResponse = await mailer.sendMail(mailOptions);
       if (mailResponse.messageId) {
         res.status(200).send(newUser.email);
@@ -165,7 +166,7 @@ router.get("/verify/:secretToken", function (req, res) {
 
     user.save(function (err, user) {
       if (err) return res.status(500).send("Error verifying the account");
-      res.redirect("https://frozen-lake-54898.herokuapp.com/#/login/");
+      res.redirect("https://fork-online-store.herokuapp.com/#/login/");
     });
   });
 });
